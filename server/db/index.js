@@ -11,11 +11,18 @@ var connection = mysql.createConnection({
   database: 'chat'
 });
 
-connection.connect();
-
-connection.query('SELECT * from messages', function (err, rows, fields) {
-  if (err) { throw err; }
-  console.log('Query test succedeed');
+connection.connect(function(err) {
+  if (err) {
+    console.log('broke');
+  } else {
+    console.log('works');
+  }
 });
 
-connection.end();
+// connection.query('SELECT * from messages', function (err, rows, fields) {
+//   if (err) { throw err; }
+//   console.log('Query test succedeed');
+// });
+
+module.exports = connection;
+// connection.end();
