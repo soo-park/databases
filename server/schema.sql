@@ -1,5 +1,5 @@
-
 CREATE DATABASE chat;
+SET FOREIGN_KEY_CHECKS = 0; -- need to disable when actually using
 
 USE chat;
 
@@ -31,21 +31,17 @@ INSERT users (username) VALUES ('Bobby');
 INSERT users (username) VALUES ('Tom');
 INSERT users (username) VALUES ('Harry');
 
-INSERT rooms (roomname) VALUES ('Lobby');
-INSERT rooms (roomname) VALUES ('Front');
+INSERT rooms (roomname) VALUES ('main');
+INSERT rooms (roomname) VALUES ('lobby');
 
-INSERT messages (message, room_id, user_id) Values('Hello', 2, 1);
-INSERT messages (message, room_id, user_id) Values('Yello', 2, 2);
-INSERT messages (message, room_id, user_id) Values('Mello', 1, 3);
-INSERT messages (message, room_id, user_id) Values('Wello', 1, 1);
+INSERT messages (message, room_id, user_id) Values('Men like you can never change!', 1, 1);
+INSERT messages (message, room_id, user_id) Values('Yello', 1, 2);
+INSERT messages (message, room_id, user_id) Values('Mello', 2, 3);
+INSERT messages (message, room_id, user_id) Values('Wello', 2, 1);
 
+SET FOREIGN_KEY_CHECKS = 1;
 
 
 /*  Execute this file from the command line by typing:
  *    mysql -u root < server/schema.sql
  *  to create the database and the tables.*/
-
--- SQL ID starts from 1. 
--- if 0 is used in seeding, it will throw foreign key constraint error
--- SET FOREIGN_KEY_CHECKS = 0; -- need to disable when actually using
--- SET FOREIGN_KEY_CHECKS = 1; 

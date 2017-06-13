@@ -36,7 +36,6 @@ module.exports = {
         }
       });
       
-      
       db.query(findRoomID, queryArgs, function(err, results1) {
         // add room_id to the object
         delete queryArgs.roomname;
