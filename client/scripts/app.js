@@ -40,8 +40,9 @@ var app = {
     // POST the message to the server
     $.ajax({
       url: app.server,
+      contentType: 'application/json',
       type: 'POST',
-      data: message,
+      data: JSON.stringify(message),
       success: function (data) {
         console.log(data, 'coming in');
         // Clear messages input
@@ -162,7 +163,7 @@ var app = {
     }
 
     var $message = $('<br><span/>');
-    $message.text(message.text).appendTo($chat);
+    $message.text(message.message).appendTo($chat);
 
     // Add the message to the UI
     app.$chats.append($chat);
