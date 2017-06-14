@@ -1,5 +1,4 @@
 CREATE DATABASE chat;
-SET FOREIGN_KEY_CHECKS = 0; -- need to disable when actually using
 
 USE chat;
 
@@ -38,9 +37,6 @@ INSERT messages (message, room_id, user_id) Values('Men like you can never chang
 INSERT messages (message, room_id, user_id) Values('Yello', 1, 2);
 INSERT messages (message, room_id, user_id) Values('Mello', 2, 3);
 INSERT messages (message, room_id, user_id) Values('Wello', 2, 1);
-
-SET FOREIGN_KEY_CHECKS = 1;
-
 
 /*  Execute this file from the command line by typing:
  *    mysql -u root < server/schema.sql

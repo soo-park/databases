@@ -82,13 +82,13 @@ app = {
         app.displayMessages(json.results);
       },
       complete: function() {
-        app.stopSpinner();
+        // app.stopSpinner();
       }
     });
   },
 
   sendMsg: function(message) {
-    app.startSpinner();
+    // app.startSpinner();
     $.ajax({
       type: 'POST',
       url: app.server,
@@ -99,7 +99,7 @@ app = {
         app.displayMessage(message);
       },
       complete: function() {
-        app.stopSpinner();
+        // app.stopSpinner();
       }
     });
   },
@@ -160,7 +160,7 @@ var FormView = Backbone.View.extend({
   handleSubmit: function(e) {
     e.preventDefault();
 
-    this.startSpinner();
+    // this.startSpinner();
 
     var $text = this.$('#message');
     this.collection.create({

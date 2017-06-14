@@ -8,7 +8,7 @@ var dbMessages = [];
 module.exports = {
   messages: {
     get: function (req, res) {
-      res.json( 'the actual message obj {results: dbMessages}');
+      console.log('fhjdgsfaASIGNAIFHNKNADIFNG');
     }, // a function which produces all the messages
     post: function (req, res) {
       console.log('fhjdgsfaASIGNAIFHNKNADIFNG');
@@ -26,26 +26,3 @@ module.exports = {
     }
   }
 };
-
-
-
-
-
-
-// do this for get
-//   res.json({ results: messages });
-
-
-
-// do all this too for post
-//   var message = '';
-//   req.on('data', function(data) {
-//     message += data;
-//   });
-  
-//   req.on('end', function () {
-//     messages.push(JSON.parse(message)); // push it to the DB, not to array
-//   });
-
-//   res.send('OK');
-// });
